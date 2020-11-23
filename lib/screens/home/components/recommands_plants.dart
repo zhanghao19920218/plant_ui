@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_ui/screens/details/details_screen.dart';
 import 'package:plant_ui/screens/home/components/recommand_plant_card.dart';
 
 class RecommandsPlants extends StatelessWidget {
@@ -17,7 +18,13 @@ class RecommandsPlants extends StatelessWidget {
             name: "Samantha",
             location: "Russia",
             price: "440",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return DetailScreen();
+                }
+              ));
+            },
           ),
           RecommandPlantCard(
             assertUrl: "assets/images/image_2.png",
